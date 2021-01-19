@@ -1,0 +1,77 @@
+body{
+  font-weight: 400;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.link-help{
+  color: #005dff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.link-help:visited{
+  color: #005dff;
+}
+
+.green-text{
+  color: #00d463;
+}
+
+.main__container{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.index{
+  vertical-align: super;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: #005dff;
+  cursor: pointer;
+}
+
+.index:after { 
+  content: attr(data-title); 
+  position: absolute;
+  padding: 1ch 1.5ch;
+  width: Min(300px, calc(150px + (150 + 150 * 0.7) * ( 90vw / 1080)));
+  max-width: Min(300px, calc(150px + (150 + 150 * 0.7) * ( (90vw - 320px)/ 1080)));
+  border-radius: .3ch;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  background-color: white;
+  bottom: 100%;
+  transform: translate(0%, -5px);
+  color: #333;
+  font-weight: 400;
+  font-size: 1.4em;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: .1s;
+  z-index: 99;
+ }
+
+ .index:hover:after{
+  opacity: 1;
+  visibility: visible;
+  transition: .1s;
+ }
+
+ .index__container{
+  position: relative; 
+ }
+
+ .img{
+   width: 100%;
+   object-fit: contain;
+ }
+
+ .subtitle{
+  font-weight: 700;
+  line-height: 1;
+  font-size: 1.3em;
+  margin-bottom: 1.9%;
+}

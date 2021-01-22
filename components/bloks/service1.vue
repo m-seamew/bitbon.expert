@@ -1,12 +1,12 @@
 <template>
   <Blok :slide_id="6" :title="$t('service_1.title')" :subtitle="$t('service_1.subtitle')" :footer_show="false">
-    <client-only>
-        <img class="bg-icon token__bg-icon" src="~assets/img/token1/bgicon.svg" alt="Bitbon logo">
+     <client-only>
+        <img class="bg-icon service__bg-icon" src="~assets/img/service/shuttle.png" alt="Bitbon logo">
     </client-only>
     <div class="main__container token__main-container">
       <div class="token__container-with-logo service__container-with-logo">
           <div class="service__img-cont service__img-cont--full">
-            <div class="service__img-header">Оцифровка<br>актива</div>
+            <div class="service__img-header"  v-html="$t('service_1.chapter_1.img-text')"></div>
           </div>
           <div class="service__chapter--withline service__chapter--full" v-html="$t('service_1.chapter_1.text')"></div>
       </div> 
@@ -98,6 +98,12 @@ export default {
     top: 0;
     left: 0;
     transform: translate(-40%, -65%);
+  }
+
+  .service__bg-icon{
+    width: 27%;
+    top: 1.5%;
+    right: 3%;
   }
 
   @media (max-width: 730px) {

@@ -25,7 +25,17 @@ export default {
   mounted(){
     const myScreenOrientation = window.screen.orientation;
     myScreenOrientation.lock("portrait"); 
-  }
+
+    document.addEventListener('touchmove', function (event) {
+      if (event.scale !== 1) { event.preventDefault(); }
+    }, false);
+  },
+
+  beforeDestroy(){
+    window.removeEventListener('touchmove', function (event) {
+      if (event.scale !== 1) { event.preventDefault(); }
+    }, false);
+  },
 }
 </script>
 

@@ -381,10 +381,10 @@ export default {
     }
 
     .blok-wrapper-horizontal{
-      font-size: calc(13px + (14 + 14 * 0.7) * ((100vh - 568px) / 1080)) !important;
+      font-size: Max(13px, calc(13px + (14 + 14 * 0.7) * ((100vh - 568px) / 1080))) !important;
       height: auto;
       width: auto;
-      //width: $screen_horizontal_mode;
+      //width: $screen_horizontal_mode; 
       padding-bottom: 35px;
     }
 

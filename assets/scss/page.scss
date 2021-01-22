@@ -65,6 +65,11 @@ body{
   cursor: pointer; 
  }
 
+ .index:focus{
+   border: none;
+   outline: none;
+ }
+
  .index:hover:after{
   opacity: 1;
   visibility: visible;

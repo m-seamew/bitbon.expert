@@ -9,6 +9,7 @@
     <Sience2></Sience2>
     <Sience3></Sience3>
     <Service1></Service1>
+    <Service2></Service2>
     <Mainaboutsystem id="clear2"></Mainaboutsystem>
     <Infrastructure2 id="test"></Infrastructure2>
   </div>
@@ -28,6 +29,7 @@ import Sience2 from '~/components/bloks/sience2';
 import Sience3 from '~/components/bloks/sience3'; 
 
 import Service1 from '~/components/bloks/service1';
+import Service2 from '~/components/bloks/service2';
 
 const VueScrollTo = require('vue-scrollto');
 
@@ -54,6 +56,7 @@ export default {
     Sience2,
     Sience3,
     Service1,
+    Service2,
   },
   methods: {
     changeLanguage(lang){
@@ -106,13 +109,3 @@ export default {
 
 </style>
 
-<i18n>
-{
-  "en": {
-    "hello": "hello world!"
-  },
-  "ru": {
-    "hello": "こんにちは、世界!"
-  }
-}
-</i18n>

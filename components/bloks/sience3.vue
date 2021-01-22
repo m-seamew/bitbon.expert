@@ -86,7 +86,8 @@ export default {
       flex: 1 1 100%;
       display: flex;
       justify-content: center;
-      align-items: stretch;
+      align-items: stretch; 
+      
       .img{
         width:50%;
         height: auto;

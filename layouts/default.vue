@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header :bitbonprice="bitbonPrice"></Header>
-    <Nuxt :bitbonprice="bitbonPrice" />
+    <Nuxt :bitbonprice="bitbonPrice"/>
     <!--<Footer></Footer>-->
   </div>
 </template>
@@ -22,6 +22,10 @@ export default {
   data: () => ({
     bitbonPrice: 0,
   }),
+  mounted(){
+    const myScreenOrientation = window.screen.orientation;
+    myScreenOrientation.lock("portrait"); 
+  }
 }
 </script>
 

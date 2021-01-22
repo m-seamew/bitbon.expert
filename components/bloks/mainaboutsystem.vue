@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="about__subnote">
-           <Subnotes :text="$t('mainaboutsystem.subnotes')" :MaxWidth="42"></Subnotes>
+           <Subnotes :text="$t('mainaboutsystem.subnotes')" :MaxWidth="44"></Subnotes>
         </div>
       </main> 
      </article>  
@@ -44,7 +44,7 @@ import Subnotes from '~/components/subnotes.vue';
 export default {
   components:{
     Subnotes,
-  }
+  },
 }
 
 </script>
@@ -67,7 +67,7 @@ export default {
   }
 
   .about__chapter--withimg-position:last-child{
-    margin-bottom: 3.9%;
+    margin-bottom: 3.2%;
   }
 
   .about__img-container{

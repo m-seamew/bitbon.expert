@@ -76,6 +76,10 @@ export default {
     height: auto;
   }
 
+  .table__point-header{
+    position: relative;
+  }
+
   @media (max-width: 1023px){
     .tablecomp__table-column{
       padding-bottom: 20px;
@@ -102,7 +106,7 @@ export default {
     background-color:rgba($color: #ffee00, $alpha: 0.35);
     
   }
-    .tablecomp__table-column--right{
+  .tablecomp__table-column--right{
     padding-right: 5%;
   }
 

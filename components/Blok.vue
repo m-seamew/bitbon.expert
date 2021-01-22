@@ -150,7 +150,7 @@ export default {
 
   }
 
-  @media (orientation: portrait) and (max-width: 1023px) {
+  @media (orientation: portrait) and (max-width: 1024px) {
    .blok-wrapper-vertical{
       width: 99vw;
       height: auto;
@@ -240,12 +240,14 @@ export default {
   }
 
   .blok-header__titles-cont{
-    margin-bottom: 5%
+    margin-bottom: Min(48px, 5%);
   }
 
   .blok__content, .blok-header__titles-cont{
-    margin-left: Min(55px, calc(10px + 45 * (100vh/1080)));
-    margin-right: Min(55px, calc(10px + 45 * (100vh/1080)));
+    //margin-left: Min(55px, calc(10px + 45 * (100vh/1080)));
+    //margin-right: Min(55px, calc(10px + 45 * (100vh/1080)));
+    margin-left: Min(55px, 5%);
+    margin-right: Min(55px, 5%);
   }
 
   .blok-header__title{
@@ -314,7 +316,7 @@ export default {
     }
   }
 
-   @media (max-height: 1023px) and (max-width: 720px){
+   @media (max-height: 1024px) and (max-width: 720px){
      .blok-wrapper-vertical{
         font-size: calc(13px + (14 + 14 * 0.7) * (100vh - 570px) / 1080) !important;
     }
@@ -324,7 +326,7 @@ export default {
 
   }
 
-  @media (min-width: 1024px) and (max-height: 750px){
+  @media (min-width: 1025px) and (max-height: 750px){
     .blok-header__author-text{
       font-size: Min(17px, calc(12px + (5 * 5 * 0.7) * ((90vh - 631px)/1080)))
     }
@@ -333,13 +335,13 @@ export default {
     }
   }
 
-  @media (min-width: 1024px) and (min-height: 1080px) and (max-height: 1199px) {
+  @media (min-width: 1025px) and (min-height: 1080px) and (max-height: 1199px) {
     .blok-wrapper-horizontal{
       font-size: calc(13px + 14 * 0.75 * (100vh / 1080)) !important;
     }
   }
 
-  @media (min-width: 1024px) and (min-height: 1200px) {
+  @media (min-width: 1025px) and (min-height: 1200px) {
     .blok-wrapper-horizontal{
       font-size: 27px !important;
     }
@@ -355,6 +357,7 @@ export default {
     .blok-wrapper-vertical{
       font-size: calc(13px + (14 + 14 * 0.7) * (100vw - 320px) / 1080) !important;
       height: auto;
+      max-height: max-content !important;
     }
     
     .block-wrapper-vartical--fixfooter-mobile{
@@ -366,7 +369,7 @@ export default {
   }
 
   //for block labdscape position on phones. Needed the tests.
-  @media screen and (min-width: 320px) and (max-width: 1023px) and (orientation: landscape) {
+  @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
     html {
       transform: rotate(-90deg);
       transform-origin: left top;
@@ -378,8 +381,9 @@ export default {
     }
 
     .blok-wrapper-horizontal{
-      font-size: calc(13px + (14 + 14 * 0.7) * ((100vh - 320px) / 1080)) !important;
+      font-size: calc(13px + (14 + 14 * 0.7) * ((100vh - 568px) / 1080)) !important;
       height: auto;
+      width: auto;
       //width: $screen_horizontal_mode;
       padding-bottom: 35px;
     }

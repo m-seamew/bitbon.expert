@@ -4,7 +4,7 @@ export default {
     title: 'blog',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no' },
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
@@ -16,8 +16,8 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    {src: '~/assets/css/normalize.css', lang: 'css'},
-    {src: '~/assets/scss/main.scss', lang: 'scss'}
+    '@/assets/css/normalize.css',
+    {src: '@/assets/scss/main.scss', lang: 'scss'}
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -36,6 +36,7 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'nuxt-i18n',
+    'vue-scrollto/nuxt',
   ],
   i18n: {
     strategy: 'prefix_except_default',
@@ -67,5 +68,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+  },
+  //router: { middleware: ['cusstomroutes'] },
 }

@@ -12,6 +12,16 @@ body{
   cursor: pointer;
 }
 
+.link-bold{
+  color: #9e9e9e;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.link-bold:visited{
+  color: #9e9e9e
+}
+
 .link-help:visited{
   color: #005dff;
 }
@@ -52,9 +62,22 @@ body{
   visibility: hidden;
   transition: .1s;
   z-index: 99;
+  cursor: pointer; 
  }
 
  .index:hover:after{
+  opacity: 1;
+  visibility: visible;
+  transition: .1s;
+ }
+
+ .index:focus:after{
+  opacity: 1;
+  visibility: visible;
+  transition: .1s;
+ }
+
+ .index.index__hover::after{
   opacity: 1;
   visibility: visible;
   transition: .1s;
@@ -74,4 +97,18 @@ body{
   line-height: 1;
   font-size: 1.3em;
   margin-bottom: 1.9%;
+}
+
+
+.slide__navigation{
+  display: block;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: #9e9e9e;
+  text-decoration: none;
+}
+
+.slide__navigation:visited{
+  color: #9e9e9e;
+  text-decoration: none;
 }

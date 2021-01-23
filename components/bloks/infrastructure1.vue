@@ -33,27 +33,7 @@
 
 <script>
 export default {
-  data: function(){
-    return {
-      checkSize: false,
-    }
-  },
-  methods: {
-    checkBrowser(){
-      let size = document.documentElement.clientWidth;
-      return this.checkSize = size < 1023 ? true : false;
-    }
-  },
-  mounted(){
-    this.blockparam = document.documentElement.clientWidth < 1023 
-      ? this.checkSize = true
-      : this.checkSize = false;
-    window.addEventListener("resize", this.checkBrowser);
-
-  },
-  beforeDestroy(){
-    window.removeEventListener('resize', this.checkBrowser); 
-  },
+  
 }
 </script>
 
@@ -145,12 +125,8 @@ export default {
 
   .infrastructure-chapter__img-container--inf1-2{
     transform: translateX(-10%);
-    flex: 0 0 44% !important;
+    flex: 0 0 44% !important; 
     max-width: 44%;
-    
-    .infrastructure-chapter__img{
-
-    }
   }
 
    .infrastructure-chapter__second-inf1{

@@ -14,6 +14,7 @@
     <Mainaboutsystem id="clear2"></Mainaboutsystem>
     <Infrastructure1></Infrastructure1>
     <Infrastructure2 id="test"></Infrastructure2>
+    <Infrastructure3></Infrastructure3>
   </div>
 </template>
 
@@ -21,6 +22,7 @@
 import Block from '~/components/Blok';
 import Infrastructure1 from '~/components/bloks/infrastructure1';
 import Infrastructure2 from '~/components/bloks/infrastructure2';
+import Infrastructure3 from '~/components/bloks/infrastructure3';
 
 import TableBlok from '~/components/bloks/tablecomp';
 import Mainaboutsystem from '~/components/bloks/mainaboutsystem';
@@ -53,6 +55,7 @@ export default {
   components: {
     Infrastructure1,
     Infrastructure2,
+    Infrastructure3,
     TableBlok,
     Mainaboutsystem,
     ChartScreen,

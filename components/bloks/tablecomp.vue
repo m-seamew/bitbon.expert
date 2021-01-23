@@ -85,7 +85,7 @@ export default {
       padding-bottom: 20px;
     }
   }
-  @media (min-width: 1024px){
+  @media (min-width: 1025px){
     .tablecomp__table{
       height: 1080px;
     } 

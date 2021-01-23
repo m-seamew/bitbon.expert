@@ -90,7 +90,7 @@ export default {
       
       .img{
         width:50%;
-        height: auto;
+        height: 50%;
       }
     }
 

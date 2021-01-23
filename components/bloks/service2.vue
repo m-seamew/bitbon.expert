@@ -3,14 +3,14 @@
     <client-only>
         <img class="bg-icon service__bg-icon" src="~assets/img/service/shuttle.png" alt="Bitbon logo">
     </client-only>
-    <div class="main__container service2__main-container">
+    <article class="main__container service2__main-container">
       <div class="token__container-with-logo service__container-with-logo">
           <div class="service__img-cont--service2">
             <div class="service__img-header--service2">
               <div class="service__img-cont--world">
                  <img class="img service__img--world" src="~assets/img/service2/world.png" alt="world">
               </div>
-              <p class="service__text-header--service2" v-html="$t('service_2.chapter_1.img-text')"></p>
+              <div class="service__text-header--service2" v-html="$t('service_2.chapter_1.img-text')"></div>
             </div>
           </div>
           <div class="service__chapter--withline-service2 service__chapter--service2" v-html="$t('service_2.chapter_1.text')"></div>
@@ -28,17 +28,18 @@
               <div class="service__img-cont--world">
                  <img class="img service__img--money" src="~assets/img/service2/money.png" alt="world">
               </div>
-              <p class="service__text-header--service2" v-html="$t('service_2.chapter_3.img-text')"></p>
+              <div class="service__text-header--service2" v-html="$t('service_2.chapter_3.img-text')"></div>
             </div>
           </div>
           <div class="service__chapter--withline-service2 service__chapter--service2" v-html="$t('service_2.chapter_3.text')"></div>
-      </div>  
+      </div> 
+
       <div class="service__chapter--2" v-html="$t('service_2.chapter_4.text')"></div>
       <div class="service__sub-chapter">
         <p>{{$t('service_2.chapter_4.sub')}}</p>
         <p>{{'/' + $t('service_2.chapter_4.author') + '/'}}</p>
       </div>
-    </div>
+    </article>
   </Blok> 
 </template> 
 

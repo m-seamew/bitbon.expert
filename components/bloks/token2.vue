@@ -6,35 +6,34 @@
     <article>
       <main>
         <div class="main__container token__main-container token__container--token2-position">
-        <div class="token__points token__points--token2-position">
-        <div class="token__point">
-          <div class="token__point-header">
-            <div class="point-header__cont">
-              <img src="~assets/img/token1/ghost.png" alt="Ghost" class="img">
-              <div class="point-header__icon">
-                  <div class="round">3</div>
+          <div class="token__points token__points--token2-position">
+           <div class="token__point">
+             <div class="token__point-header">
+                <div class="point-header__cont">
+                  <img src="~assets/img/token1/ghost.png" alt="Ghost" class="img">
+                  <div class="point-header__icon">
+                    <div class="round">3</div>
+                  </div>
+                </div>
+                <h3 class="token__point-title" v-html="$t('token_2.point_1.title')"></h3>
+             </div>
+             <div class="token__point-text" v-html="$t('token_2.point_1.text')"></div>
+           </div>
+           <div class="token__point">
+              <div class="token__point-header">
+                <div class="point-header__cont">
+                  <img src="~assets/img/token1/money.png" alt="Money" class="img">
+                  <div class="point-header__icon">
+                      <div class="round">4</div>
+                  </div>
+                </div>
+                <h3 class="token__point-title" v-html="$t('token_2.point_2.title')"></h3>
               </div>
-            </div>
-            <h3 class="token__point-title" v-html="$t('token_2.point_1.title')"></h3>
+              <div class="token__point-text" v-html="$t('token_2.point_2.text')"></div>
+           </div>
           </div>
-          <div class="token__point-text" v-html="$t('token_2.point_1.text')"></div>
-        </div>
-        <div class="token__point">
-          <div class="token__point-header">
-            <div class="point-header__cont">
-              <img src="~assets/img/token1/money.png" alt="Money" class="img">
-              <div class="point-header__icon">
-                  <div class="round">4</div>
-              </div>
-            </div>
-            <h3 class="token__point-title" v-html="$t('token_2.point_2.title')"></h3>
-          </div>
-          <div class="token__point-text" v-html="$t('token_2.point_2.text')"></div>
-        </div>
-      </div>
-      <div>
-        <div class="note" v-html="$t('token_2.note')">
-      </div>
+        
+        <div class="note" v-html="$t('token_2.note')"></div>
       <div class="token__container-with-logo token__container-with-logo--token2">
           <div class="token__logo-cont token__logo-cont--token2">
             <p>Всего было выпущено Bitbon:</p>
@@ -42,9 +41,9 @@
           </div>
           <div class="token__chapter token__chapter--token2" v-html="$t('token_2.chapter_1.text')"></div>
       </div> 
-      <a href="#" class="slide__navigation token2__navigation-link" v-html="'/' + $t('token_2.chapter_1.comment') + '/'"></a>
+      <div href="#" class="slide__navigation token2__navigation-link" v-html="`/${$t('token_2.chapter_1.comment')}/`"></div>
       </div>
-    </div>  
+      
       </main>
     </article>
   </Blok>
@@ -65,8 +64,10 @@ export default {
   }
   }
 
+
   .token2__navigation-link{
     text-align: right;
+    margin-bottom: 20px;
   }
 
   .token__logo-cont--token2{
@@ -119,7 +120,6 @@ export default {
   }
   .token2__navigation-link{
     margin-left: 4%;
-    margin-bottom: 20px;
     text-align: left;
   }
   }

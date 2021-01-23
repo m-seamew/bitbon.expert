@@ -10,6 +10,7 @@
     <Sience3></Sience3>
     <Service1></Service1>
     <Service2></Service2>
+    <Service3></Service3>
     <Mainaboutsystem id="clear2"></Mainaboutsystem>
     <Infrastructure2 id="test"></Infrastructure2>
   </div>
@@ -24,12 +25,14 @@ import ChartScreen from '~/components/bloks/chartscreen';
 import TargetProject from '~/components/bloks/targetproject';
 import Token1 from '~/components/bloks/token1';
 import Token2 from '~/components/bloks/token2';
+
 import Sience1 from '~/components/bloks/sience1';
 import Sience2 from '~/components/bloks/sience2';
 import Sience3 from '~/components/bloks/sience3'; 
 
 import Service1 from '~/components/bloks/service1';
 import Service2 from '~/components/bloks/service2';
+import Service3 from '~/components/bloks/service3'; 
 
 const VueScrollTo = require('vue-scrollto');
 
@@ -57,6 +60,7 @@ export default {
     Sience3,
     Service1,
     Service2,
+    Service3,
   },
   methods: {
     changeLanguage(lang){

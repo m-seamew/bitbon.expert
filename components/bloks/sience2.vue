@@ -49,6 +49,7 @@ export default {
 }
 
 </script>
+
 <style lang="scss">
 
   .sience__chapter--position-slide2{

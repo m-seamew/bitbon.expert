@@ -9,7 +9,7 @@
           <div class="service__img-cont--service3">
             <div class="service__img-header--service2">
               <div class="service__img-cont--world">
-                 <img class="img service__img--world" src="~assets/img/service2/world.png" alt="world">
+                 <img class="img service__img--hand" src="~assets/img/service/hand.png" alt="hand">
               </div>
               <div class="service__text-header--service2" v-html="$t('service_3.chapter_1.img-text')"></div>
             </div>
@@ -20,8 +20,8 @@
       <div class="token__container-with-logo service__container-with-logo">
           <div class="service__img-cont--service3">
             <div class="service__img-header--service2">
-              <div class="service__img-cont--world">
-                 <img class="img service__img--money" src="~assets/img/service2/money.png" alt="world">
+              <div class="service__img-cont--world"> 
+                 <img class="img service__img--contract" src="~assets/img/service/contract.png" alt="smart contract">
               </div>
               <div class="service__text-header--service2" v-html="$t('service_3.chapter_2.img-text')"></div>
             </div>
@@ -62,6 +62,17 @@ export default {
     left: 3.5%;
     top: auto;
     right: auto;
+  }
+
+  .service__img--hand, .service__img--contract{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    vertical-align:bottom;
+  }
+
+  .service__img--contract{
+     margin-bottom: 13px;
   }
 
   .service__comment--service3{

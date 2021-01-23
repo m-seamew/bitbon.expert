@@ -364,7 +364,7 @@ export default {
       padding-bottom: 35px;
     }
     .blok-wrapper-horizontal{
-      font-size: calc(13px + (14 + 14 * 0.7) * (100vh - 570px) / 1080) !important;
+      font-size: calc(13px + (14 + 14 * 0.7) * ((100vh - 570px) / 1080)) !important;
     }
   }
 
@@ -391,8 +391,7 @@ export default {
     }
 
     .blok-wrapper-horizontal{
-      height:  auto;
-      width: 99vh;
+      width: 100%;
     }
 
     .blok-header__number{
@@ -401,6 +400,13 @@ export default {
     .blok-header__author-text, .blok-footer__link{
         font-size: Max(10px, calc(10px + (5 + 5 * 0.7) * ((#{$screen_horizontal_mode} - 320px) / 1080))) !important;
     }
+
+     @media (max-width: 730px){
+    .blok-wrapper-horizontal{
+      font-size: calc(13px + (14 + 14 * 0.7) * ((100vh - 320px) / 1080)) !important;
+    }
+  }
+
   } 
 
 </style>

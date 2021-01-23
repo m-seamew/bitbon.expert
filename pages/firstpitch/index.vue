@@ -12,13 +12,16 @@
     <Service2></Service2>
     <Service3></Service3>
     <Mainaboutsystem id="clear2"></Mainaboutsystem>
+    <Infrastructure1></Infrastructure1>
     <Infrastructure2 id="test"></Infrastructure2>
   </div>
 </template>
 
 <script>
 import Block from '~/components/Blok';
+import Infrastructure1 from '~/components/bloks/infrastructure1';
 import Infrastructure2 from '~/components/bloks/infrastructure2';
+
 import TableBlok from '~/components/bloks/tablecomp';
 import Mainaboutsystem from '~/components/bloks/mainaboutsystem';
 import ChartScreen from '~/components/bloks/chartscreen';
@@ -48,6 +51,7 @@ export default {
     ]
   }),
   components: {
+    Infrastructure1,
     Infrastructure2,
     TableBlok,
     Mainaboutsystem,

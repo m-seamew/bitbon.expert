@@ -19,7 +19,8 @@ body{
 }
 
 .link-bold:visited{
-  color: #9e9e9e
+  color: #9e9e9e;
+  cursor: pointer;
 }
 
 .link-help:visited{
@@ -116,4 +117,10 @@ body{
 .slide__navigation:visited{
   color: #9e9e9e;
   text-decoration: none;
+}
+ 
+.subnotes__hash{
+  line-height: 1.46;
+  font-size: $notesFontSize;
+  color: $fontHeader;
 }

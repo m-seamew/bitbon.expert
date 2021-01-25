@@ -3,6 +3,8 @@
     <TableBlok id="clear1"></TableBlok>
     <ChartScreen></ChartScreen>
     <TargetProject></TargetProject>
+    <Plan1></Plan1>
+
     <Token1></Token1>
     <Token2></Token2>
     <Sience1></Sience1>
@@ -11,6 +13,10 @@
     <Service1></Service1>
     <Service2></Service2>
     <Service3></Service3>
+
+    <Devs></Devs>
+    <Vuvod></Vuvod>
+    <Stat></Stat>
     <Mainaboutsystem id="clear2"></Mainaboutsystem>
     <Infrastructure1></Infrastructure1>
     <Infrastructure2 id="test"></Infrastructure2>
@@ -38,6 +44,12 @@ import Sience3 from '~/components/bloks/sience3';
 import Service1 from '~/components/bloks/service1';
 import Service2 from '~/components/bloks/service2';
 import Service3 from '~/components/bloks/service3'; 
+
+import Devs from '~/components/bloks/devs'; 
+
+import Vuvod from '~/components/bloks/vuvod';
+import Stat from '~/components/bloks/stat.vue';
+import Plan1 from '~/components/bloks/plan1';
 
 const VueScrollTo = require('vue-scrollto');
 
@@ -68,6 +80,10 @@ export default {
     Service1,
     Service2,
     Service3,
+    Devs,
+    Vuvod,
+    Stat,
+    Plan1
   },
   methods: {
     changeLanguage(lang){

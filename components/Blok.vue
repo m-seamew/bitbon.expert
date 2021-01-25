@@ -101,7 +101,9 @@ export default {
 
 <style lang="scss">
   @import '~/assets/scss/variables';
-
+  .blok-footer{
+    pointer-events: none;
+  }
   .blok-wrapper{
     margin: 0 auto;
     -webkit-backdrop-filter: blur(30px);
@@ -237,6 +239,7 @@ export default {
     object-fit: contain;
     right: -60px;
     bottom: -50px;
+    z-index: -1;
   }
 
   .blok-header__titles-cont{

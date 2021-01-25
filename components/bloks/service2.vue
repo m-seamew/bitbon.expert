@@ -17,7 +17,7 @@
       </div> 
 
       <div class="service__chapter--2" v-html="$t('service_2.chapter_2.text')"></div>
-      <div class="service__sub-chapter">
+      <div class="subnotes__hash">
         <p>{{$t('service_2.chapter_2.sub')}}</p>
         <p>{{'/' + $t('service_2.chapter_2.author') + '/'}}</p>
       </div>
@@ -35,7 +35,7 @@
       </div> 
 
       <div class="service__chapter--2" v-html="$t('service_2.chapter_4.text')"></div>
-      <div class="service__sub-chapter">
+      <div class="subnotes__hash">
         <p>{{$t('service_2.chapter_4.sub')}}</p>
         <p>{{'/' + $t('service_2.chapter_4.author') + '/'}}</p>
       </div>
@@ -51,12 +51,6 @@ export default {
 
 <style lang="scss">
   @import '~/assets/scss/variables';
-
-  .service__sub-chapter{
-    line-height: 1.46;
-    font-size: $notesFontSize;
-    color: $fontHeader;
-  }
 
   .service__chapter--2{
     margin-top: 3.3%;

@@ -154,7 +154,7 @@ export default {
   }
     .infrastructure-chapter__img-container--inf1{
     position: absolute;
-    top: 15%;
+    top: 0;
     right: -11%;
    }
 

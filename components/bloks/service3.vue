@@ -108,6 +108,7 @@ export default {
   @media (max-width: 730px) {
     .service__img-cont--service3{
       flex: 0 0 100%;
+      padding-left: 0;
     }
     .service3__subnote{
     margin-left: 31%;

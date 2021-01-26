@@ -98,6 +98,12 @@ body{
    object-fit: contain;
  }
 
+ .img--full{
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+ }
+
  .subtitle{
   font-weight: 700;
   line-height: 1;

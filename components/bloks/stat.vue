@@ -3,6 +3,7 @@
     <article>
     <client-only>
         <img class="bg-icon stat__bg-icon" src="~assets/img/stat/bgicon.png" alt="">
+        <Observer @firstobserve="animation"></Observer>
     </client-only>
     <main class="main__container vuvod__main-container">
 

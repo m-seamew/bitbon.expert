@@ -10,7 +10,7 @@ export default {
   mounted() {
     const options = {
     rootMargin: "0px",
-    threshold: 1.0
+    threshold: [0, 0.25, 0.5, 0.75, 1]
     };
     
     this.observer = new IntersectionObserver( entries => {

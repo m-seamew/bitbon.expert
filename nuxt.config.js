@@ -23,7 +23,8 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~plugins/app-components.js',
-    { src: './plugins/vue-carousel.js', mode: 'client' }
+    { src: './plugins/vue-carousel.js', mode: 'client' },
+    { src: './plugins/flickity.js', ssr: false}
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

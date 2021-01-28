@@ -127,7 +127,11 @@ export default {
     right: 11%;
   }
 ///////////////////
-
+  @media (max-width: 1023px) {
+    .stat__element:last-child {
+    padding-bottom: 0;
+}
+  }
 
 </style>
 

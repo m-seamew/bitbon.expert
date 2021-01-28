@@ -86,6 +86,9 @@ export default {
 
 <style lang="scss">
   @import '~/assets/scss/variables';
+  .potential__main-container{
+    margin-bottom: 30px;
+  }
   .potential__note-cont--company{
     margin-bottom: Max(15px, 2.5%);
   }

@@ -10,6 +10,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "@khusainovrm/nuxt-player": "0.0.25",
     "animated-number-vue": "^1.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
@@ -17,8 +18,10 @@
     "nuxt": "^2.14.6",
     "nuxt-i18n": "^6.18.0",
     "vue-carousel": "^0.18.0",
+    "vue-core-video-player": "^0.2.0",
     "vue-flickity": "^1.2.1",
     "vue-lottie-ssr": "git+https://github.com/serzz1990/vue-lottie.git",
+    "vue-plyr": "^7.0.0",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {

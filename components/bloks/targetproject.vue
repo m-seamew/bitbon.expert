@@ -23,7 +23,6 @@
     <client-only>
           <img class="bg-icon target__bg-icon" src="~assets/img/targetproject/bgicon.svg" alt="bgicon">
     </client-only>
-    <div id="chart"></div>
     <div class="main__container">
       
     </div>  
@@ -124,7 +123,7 @@ export default {
 
 @media (max-width: 1023px){
   .targer__note-container{
-      padding-bottom: 20px;
+      padding-bottom: 30px;
   }
 }
 </style> 

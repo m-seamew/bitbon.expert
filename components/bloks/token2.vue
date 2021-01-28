@@ -67,7 +67,7 @@ export default {
 
   .token2__navigation-link{
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .token__logo-cont--token2{

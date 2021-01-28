@@ -5,7 +5,7 @@
         <img class="bg-icon plan__bg-icon" src="~assets/img/plan/bgicon.png" alt="">
         <Observer @firstobserve="animation"></Observer>
     </client-only>
-    <main class="main__container plan__main-container">
+    <main class="main__container plan__main-container plan__main-container--1">
 
       <div class="plan__blok" v-for="(el, index) in tablePoint($t('plan_1.list'))" :key="index">
         <div class="plan__block-left">
@@ -96,7 +96,6 @@ export default {
     font-weight: 700;
     font-size: $fontOfStatList;
   }
-  
 
   .plan__blok:not(:last-child) .plan__block-left .header--rotate::before{
     content: '';
@@ -151,12 +150,13 @@ export default {
     padding-top: 3.5%;
   }
 
-  .plan__blok:last-child .plan__list{
-    padding-bottom: 3.5%;
-  }
 ///////////////////
 
-
+  @media (max-width: 1023px){
+  .plan__main-container--1{
+      padding-bottom: 30px;
+  }
+}
 </style>
 
 

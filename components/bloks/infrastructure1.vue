@@ -149,6 +149,9 @@ export default {
     margin-top: 8%;
   }
   @media (max-width: 1023px) {
+    .infrastructure-chapter:last-child{
+      margin-bottom: 30px;
+    }
     .infrastructure-chapter__img-container--inf1{
      width: 50% !important;
   }

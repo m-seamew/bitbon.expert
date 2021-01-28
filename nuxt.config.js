@@ -24,7 +24,8 @@ export default {
   plugins: [
     '~plugins/app-components.js',
     { src: './plugins/vue-carousel.js', mode: 'client' },
-    { src: './plugins/flickity.js', ssr: false}
+    { src: './plugins/flickity.js', ssr: false},
+    { src: './plugins/videoplayer.js', mode: 'client' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -38,6 +39,7 @@ export default {
   modules: [
     'nuxt-i18n',
     'vue-scrollto/nuxt',
+    ['@khusainovrm/nuxt-player', { namespace: 'UcasePlayer', defaultUrl: "someUrl" }], 
   ],
   i18n: {
     strategy: 'prefix_except_default',

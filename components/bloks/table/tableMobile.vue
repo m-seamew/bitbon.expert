@@ -40,9 +40,10 @@ export default {
       type: Number,
       default: 0,
     },
-    active: true,
-    
   },
+  data: ()=>({
+    active: true,
+  }),
   methods:{
     tablePoint(objData){
       const data = [];

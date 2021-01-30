@@ -40,6 +40,6 @@ export default {
 
   .subnotes-text__img-container{
     width: Max(30px, 5%);
-    margin-right: max(45px, 6.9%);
+    margin-right: max(35px, 6.9%);
   }
 </style>

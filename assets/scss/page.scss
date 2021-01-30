@@ -53,7 +53,7 @@ body{
   border-radius: .3ch;
   box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
   background-color: white;
-  bottom: 100%;
+  //bottom: 100%;
   transform: translate(0%, -5px);
   color: #333;
   font-weight: 400;
@@ -65,6 +65,8 @@ body{
   z-index: 99;
   cursor: pointer; 
  }
+
+
 
  .index:focus{
    border: none;
@@ -93,6 +95,16 @@ body{
   position: relative; 
  }
 
+ @media (max-width: 770px){
+  .index:after {
+    top: 10px !important;
+    bottom: auto !important;
+    margin-left: 10px !important;
+  }
+  .index__container{
+    position: none; 
+   }
+ }
  .img{
    width: 100%;
    object-fit: contain;

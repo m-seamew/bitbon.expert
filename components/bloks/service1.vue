@@ -105,7 +105,21 @@ export default {
     top: 1.5%;
     right: 3%;
   }
+   @media (max-width: 730px) {
+    .service__img-cont--full{
+      flex: 0 0 40%;
+      margin-left: 0;
+      text-align: left;
+      
+    }
+    .service__img-header{
+      font-size: 1em;
+      margin-right: 5px;
+    }
+    
 
+  }
+/*
   @media (max-width: 730px) {
     .service__container-with-logo{
       flex-wrap: wrap;
@@ -124,7 +138,7 @@ export default {
     .service__chapter--full::before{
       display: none;
     }
-  } 
+  } */
 
 
 </style>

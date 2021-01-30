@@ -77,7 +77,7 @@ export default {
   }
 
   .plan__block-left{
-    flex: 0 0 5%;
+    flex: 0 0 1.7em;
     height: inherit;
     width: inherit;
     display: flex;
@@ -123,7 +123,11 @@ export default {
 
   .plan__list-item{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  .plan__list{
+    line-height: 1.5;
   }
 
   .plan__tick-container{
@@ -131,13 +135,13 @@ export default {
     flex-grow: 0;
     margin-left: 2.5%;
     margin-right: 5px;
-    height: 1em;
-    //width: 2em;
+    margin-top: .165em;
   }
 
   
-  .tick{
-    height: 100%;
+  .tick, .tick--round{
+    height: 1em !important;
+    width: 1em !important;
     object-fit: contain;
   }
 
@@ -150,6 +154,10 @@ export default {
     padding-top: 3.5%;
   }
 
+  .plan__bg-icon{
+    width: 26%;
+    right: 8%;
+  }
 ///////////////////
 
   @media (max-width: 1023px){

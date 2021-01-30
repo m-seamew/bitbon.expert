@@ -30,6 +30,11 @@ $screen_vertical_mode: 90vw;
 $headerFontSizeFirst: 2.6em;
 $subheaderFontSizeFirst: 1.3em;
 
+@media (max-width: 1023px){
+  $headerFontSizeFirst: 1.9em;
+  $subheaderFontSizeFirst: 1.1em; 
+}
+
 $headerFontSize: 1.3em;
 $subheaderFontSize: 1em;
 $notesFontSize: 0.9em;

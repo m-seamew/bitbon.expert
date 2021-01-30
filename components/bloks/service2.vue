@@ -4,7 +4,7 @@
         <img class="bg-icon service__bg-icon" src="~assets/img/service/shuttle.png" alt="Bitbon logo">
     </client-only>
     <article class="main__container service2__main-container">
-      <div class="token__container-with-logo service__container-with-logo">
+      <div class="token__container-with-logo service__container-with-logo service__container-wrap">
           <div class="service__img-cont--service2">
             <div class="service__img-header--service2">
               <div class="service__img-cont--world">
@@ -22,7 +22,7 @@
         <p>{{'/' + $t('service_2.chapter_2.author') + '/'}}</p>
       </div>
 
-      <div class="token__container-with-logo service__container-with-logo">
+      <div class="token__container-with-logo service__container-with-logo service__container-wrap">
           <div class="service__img-cont--service2">
             <div class="service__img-header--service2">
               <div class="service__img-cont--world">
@@ -49,7 +49,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
   @import '~/assets/scss/variables';
 
   .service__chapter--2{
@@ -137,6 +137,21 @@ export default {
       margin-bottom: 10px;
     }
   } 
+
+   @media (max-width: 730px) {
+    .service__container-wrap{
+      flex-wrap: wrap;
+    }
+    .service__img-header--service2{
+      align-items: flex-start;
+    }
+    .service__text-header--service2{
+      padding-left: 0;
+      margin-top: 5px;
+      text-align: left;
+    }
+
+  }
 </style>
 
 

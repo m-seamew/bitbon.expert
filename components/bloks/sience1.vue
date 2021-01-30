@@ -68,6 +68,13 @@ export default {
     }
   }
 
+  @media (max-width: 770px) {
+    .siecne__img-container{
+      flex: 0 0 30%;
+    }
+    
+  }
+
   .sience__chapter:first-child{
     margin-top: Max(20px, 3.7%); 
   }

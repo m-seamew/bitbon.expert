@@ -8,20 +8,21 @@
           <div class="div chart_screen__chapter" v-html="$t('target_project.chapter_1.text')"></div>
       </div> 
 
-      <div class="target__chapter target__chapter--beforetable" v-html="$t('target_project.chapter_2.text')"></div>
+      <div class="target__chapter target__chapter--beforetable-big" v-html="$t('target_project.chapter_2.text')"></div>
       <div class="target__chapter target__chapter--beforetable" v-html="$t('target_project.chapter_3.text')"></div>
 
 
         <div class="targer__note-container">
         <div class="note target__note">
-              <img src="~assets/img/targetproject/pick.png" alt="Bitbon Ghost character" class="img target__pick">
-              {{$t('target_project.note')}}
+          <div class="target__note-text">{{$t('target_project.note')}} </div>             
         </div>
+        
         </div>
         
     </div>  
     <client-only>
           <img class="bg-icon target__bg-icon" src="~assets/img/targetproject/bgicon.svg" alt="bgicon">
+          <img src="~assets/img/targetproject/pick.png" alt="Bitbon Ghost character" class="bg-icon target__pick-icon">
     </client-only>
     <div class="main__container">
       
@@ -61,8 +62,13 @@ export default {
   background-color: #cbcbcb;
 }
 
+.target__chapter--beforetable-big{
+   padding-top: 6%;
+  }
+  
 .target__note{
-  width: 100%;
+  width: 55%;
+  height: max-content;
   
 }
 .target__pick{ 
@@ -70,6 +76,18 @@ export default {
   width: 45%;
   object-fit: cover !important;
 }  
+
+
+
+.target__pick-icon{
+  bottom: 0;
+  right: 5%;
+  top: auto;
+  left: auto;
+  width: 40%;
+  z-index: 1;
+}
+
 
 .targer__note-container{
   padding-top: 2%
@@ -87,8 +105,10 @@ export default {
 
 @media (max-width: 1024px) {
   .targer__note-container{
-  padding-top: 6%
+  padding-top: 6%;
+  padding-bottom: 30px;
 }
+
 
 .target__bg-icon {
     top: -8%;
@@ -107,11 +127,28 @@ export default {
     margin-bottom: -6%;
   }
   .targer__note-container{
-    padding-top: 6%
+    padding-top: 5%
   }
   .target__chapter--beforetable{
-  padding-top: 4%;
+   padding-top: 4%;
+  }
 }
+
+@media (max-width: 730px) {
+  .target__pick-icon{
+    position: absolute;
+    width: 70%;
+    right: 20%;
+    bottom: -1%;
+  }
+  .target__note-text{
+    margin-right: 5%;
+  }
+  .target__note{
+    margin-bottom: 45%;
+    width: 100%;
+  }
+  
 }
 
 .target__note-container{

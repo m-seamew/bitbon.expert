@@ -1,5 +1,5 @@
 <template>
-  <Blok :slide_id="22" :title="$t('plan_2.title')" :subtitle="$t('plan_2.subtitle')" :footer_show="false" :first="false">
+  <Blok :slide_id="23" :title="$t('plan_2.title')" :subtitle="$t('plan_2.subtitle')" :footer_show="false" :first="false">
     <article>
     <client-only>
         <img class="bg-icon plan__bg-icon" src="~assets/img/plan/bgicon.png" alt="">

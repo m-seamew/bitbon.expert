@@ -23,7 +23,7 @@
             </div>    
           </div>
           <div class="sience__chapter sience__chapter--position-slide3 sience__chapter--header" v-html="$t('sience3.article')"></div>
-           <div class="sience__chapter sience__chapter--withimg-position sience__chapter--wrap">
+           <div class="sience__chapter sience__chapter--float sience__chapter--withimg-position sience__chapter--wrap">
             <div class="siecne__img-container siecne__img-container--big">
               <img :src="require(`~/assets/img/${$t('sience3.chapter2.img')}`)" alt="document" class="img">
             </div>
@@ -83,15 +83,18 @@ export default {
 
   @media (max-width: 730px) {
     .siecne__img-container--big{
-      flex: 1 1 100%;
-      display: flex;
-      justify-content: center;
-      align-items: stretch; 
+      display: block;
+      width: 30%;
+      float: left;
       
       .img{
-        width:50%;
-        height: 50%;
+        width:100%;
+        height: 100%;
       }
+    }
+
+    .sience__chapter--float{
+      display: block;
     }
 
     .sience__chapter-header--big{

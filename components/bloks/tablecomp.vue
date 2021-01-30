@@ -8,44 +8,24 @@
           </div>
           <div class="tablecomp__chapter tablecomp__chapter--beforetable" v-html="$t('tablecomp.chapter')"></div>
         </div>
-        <div class="tablecomp__table">
-          <div class="tablecomp__table-column tablecomp__table-column--left">
-            <div class="tablecomp__text--left">
-              <h3 class="tablecomp__table-column-header" v-html="$t('tablecomp.column_left.title')"></h3>
-                <ul v-for="(el, index) in tablePoint($t('tablecomp.column_left.points'))" :key="index">
-                  <li class="table__point">
-                    <div class="table__point-header" v-html="el.title"></div>
-                    <div v-if="el.descr != 'bitbonPrice'" class="table__point-text" v-html="el.descr"></div>
-                    <div v-else class="table__point-text">{{bitbonPrice}}</div>
-                  </li>
-                </ul>
-                <div class="table__comment" v-html="$t('tablecomp.column_left.comment')"/>
-            </div>
-          </div>
-          <div class="tablecomp__table-column tablecomp__table-column--right">
-            <div class="tablecomp__text--right">
-              <div class="tablecomp__table-column-header"  v-html="$t('tablecomp.column_right.title')"></div>
-               <ul v-for="(el, index) in tablePoint($t('tablecomp.column_right.points'))" :key="index">
-                  <li class="table__point">
-                    <div class="table__point-header" v-html="el.title"></div>
-                    <div class="table__point-text" v-html="el.descr"></div>
-                  </li>
-                </ul>
-            </div>  
-          </div>
-        </div>
+        <TableMobile v-if="isMobile"></TableMobile>
+        <TableComputer v-else></TableComputer>
       </main>
     </article>
    </Blok>
 </template>
 
 <script>
+import TableMobile from '~/components/bloks/table/tableMobile';
+import TableComputer from '~/components/bloks/table/tableComputer';
+
 export default {
   async fetch(){
     this.bitbonPrice = this.$store.getters['bitbon/getPrice'];
   },
   data: () => ({
     bitbonPrice: 0,
+    isMobile: true,
   }),
   methods:{
     tablePoint(objData){
@@ -54,9 +34,28 @@ export default {
         data.push(objData[i]);
       }
       return data;
-    }
+    },
+    checkIfMobile(){
+      this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
+    },
+  },
+  comments: {
+    TableMobile,
+    TableComputer,
+  },
+  mounted(){
+    this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
+    window.addEventListener("resize", this.checkIfMobile);
+  },
+  beforeDestroy(){
+    window.removeEventListener('resize', this.checkIfMobile); 
   }
 }
+
+
+
+  
+ 
 </script>
 
 <style lang="scss">
@@ -77,7 +76,7 @@ export default {
   }
 
   .table__point-header{
-    position: relative;
+    //position: relative;
   }
 
   @media (max-width: 1023px){

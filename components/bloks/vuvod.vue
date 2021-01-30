@@ -14,8 +14,8 @@
       </div>
 
       <div class="vuvod__subnotes-hash-container">
-        <div class="subnotes-hash__left-side">
-
+        <div class="subnotes-hash__left-side"> 
+          <img class="img" src="~assets/img/vuvod/obls.jpg" alt="">
         </div>
         <div class="subnotes-hash__right-side">
           <div class="subnotes-text" v-html="$t('vuvod.article.chapter_2.text')"></div>
@@ -44,9 +44,10 @@ export default {
   }
 
   .subnotes-hash__left-side{
+    display: flex;
     flex: 0 0 20%;
     height: inherit;
-    background-color: silver;
+    //background-color: silver;
   }
   .vuvod__bg-icon{
     right: 7.8%;
@@ -86,6 +87,7 @@ export default {
 
   .vuvod__subnotes-hash-container{
     background-color: #fffbbe;
+    align-items: center;
     display: flex;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
     margin-bottom: 30px;
@@ -161,6 +163,18 @@ export default {
     left: 0;
     right: auto;
     top: auto;
+  }
+
+  @media (max-width: 380px) {
+    .subnotes-text {
+    padding: 0.5em 1em;
+    }
+  }
+
+  @media (min-width: 750px) and (max-width: 950px){
+    .subnotes-text {
+    padding: 1em 1.25em;
+    }
   }
 
 </style>

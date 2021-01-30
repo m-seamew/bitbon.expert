@@ -159,6 +159,7 @@ export default {
         justify-content: center;
         .img{
           width: 70%;
+          height: 70%;
         }
       }
 
@@ -257,28 +258,9 @@ export default {
        margin-bottom: Max(5px, 1%);
      }
    }
- @media (max-width: 660px) {
-     .sience4__left{
-       flex: 0 0 100%;
-       margin-bottom: 5%; 
-       border: none;
-     }
-     .sience4__right{
-       flex: 0 0 100%;
-       border-top: 1px solid #cbcbcb;
-       padding-top: 5%;
-       .img{
-          width: 50% !important;
-          margin-bottom: 10px;
-        }
-     }
 
-     .sience4__container{
-       flex-wrap: wrap;
-     }
+   
 
-     
-   }
 
   .sience4{
     &__chapter-header{
@@ -313,6 +295,41 @@ export default {
        margin-top: 8%;
        margin-bottom: 5%;
      }
+
+     @media (max-width: 660px) {
+  .sience4__right .sience4__chapter-text-container{
+    margin-left: 0 ;
+  }
+
+  .sience4__chapter-header{
+    text-align: center;
+  }
+
+  .sience4__bg-icon-footer{
+    width: 40%;
+  }
+     .sience4__left{
+       flex: 0 0 100%;
+       margin-bottom: 5%; 
+       border: none;
+     }
+     .sience4__right{
+       flex: 0 0 100%;
+       border-top: 1px solid #cbcbcb;
+       padding-top: 5%;
+       .img{
+          width: 50% !important;
+          height: 50%;
+          margin-bottom: 10px;
+        }
+     }
+
+     .sience4__container{
+       flex-wrap: wrap;
+     }
+
+     
+   }
 </style> 
 
 <i18n locale="ru" src="~/assets/lang/sience4/ru.json"></i18n>

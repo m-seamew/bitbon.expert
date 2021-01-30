@@ -6,7 +6,7 @@
     :footer_show="false">
       
       <article>
-        <div class="infrastructure-chapter">
+        <div class="infrastructure-chapter infrastructure-chapter-relative">
           <div class="infrastructure-chapter__text-container infrastructure-chapter__text-container--inf1">
             <h3 class="subtitle subtitle infrastructure-chapter__subtitle--80pxdown">{{$t('infrastructure1slide.article.chapter1.title')}}</h3>
             <div v-html="$t('infrastructure1slide.article.chapter1.text')"></div>
@@ -153,19 +153,28 @@ export default {
       margin-bottom: 30px;
     }
     .infrastructure-chapter__img-container--inf1{
-     width: 50% !important;
+     display: none;
   }
-    .infrastructure-chapter__img-container--inf1{
-    position: absolute;
-    top: 0;
-    right: -11%;
-   }
+    .infrastructure-chapter__text-container--inf1::before{
+      content: '';
+       background: url('~assets/img/infrastructure/3list.png');
+       background-size: contain;
+       background-repeat: no-repeat;
+       background-position: center center;
+       width: 40vw;
+       height: 40vh; 
+       position: absolute;
+       z-index: 999;
+       top: 40%;
+       transform: translateY(-50%);
+       right: -5%;
+  }
 
-   .infrastructure-chapter__text-container--inf1{
-    max-width: 70%
-  }
   .infrastructure-chapter__text-container--inf2{
     margin-left: -5%;
+  }
+  .infrastructure-chapter-relative{
+    position: relative;
   }
   }
 

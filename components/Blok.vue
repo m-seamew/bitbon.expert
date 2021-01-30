@@ -118,6 +118,10 @@ export default {
     max-height: 1080px !important;
     overflow: hidden;
     line-height: 1.3;
+    margin-bottom: 1vh;
+  }
+  .blok-wrapper:not(:first-child){
+    margin-top: 1vh;
   }
 
   .blok-header{
@@ -132,7 +136,8 @@ export default {
 
   @media (max-width: 420px){
     .blok-header__author-logo{
-    width: 30%;
+    width: 21%;
+    margin-bottom: 1px;
     }
   }
 
@@ -154,7 +159,7 @@ export default {
 
   @media (orientation: portrait) and (max-width: 1024px) {
    .blok-wrapper-vertical{
-      width: 99vw;
+      width: 98vw;
       height: auto;
     }
   }
@@ -242,6 +247,17 @@ export default {
     z-index: -1;
   }
 
+  @media (max-width: 1023px) {
+    .blok-footer__img{
+      right: -5.5%;
+      bottom: -5%;
+      z-index: -1;
+      width: 50%;
+    }  
+  }
+
+
+
   .blok-header__titles-cont{
     margin-bottom: Min(48px, 5%);
   }
@@ -263,6 +279,8 @@ export default {
     color: $fontHeader;
   }
 
+
+
   .blok-header__title--first{
     font-size: $headerFontSizeFirst;
     color: $mainFontColor;
@@ -278,17 +296,27 @@ export default {
     color: $fontHeader;
   }
 
+
   .blok-header__subtitle--first{
     font-size: $subheaderFontSizeFirst;
     color: $mainFontColor;
   }
-/*
+
+  @media (max-width: 1023px) {
+    .blok-header__title--first{
+    font-size: $headerFontSizeFirst * 0.75;
+    }
+    .blok-header__subtitle--first{
+    font-size: $subheaderFontSizeFirst *0.85;
+    }
+  }
+
   @media (orientation: landscape) and (max-width: 1024px) {
    .blok-wrapper-horizontal{
       width: $screen_vertical_mode;
       height: 90vw;
     }
-  }*/
+  }
 
   @media (max-width: 730px){
     .blok-header__number{
@@ -371,7 +399,7 @@ export default {
     }
   }
 
-  //for block labdscape position on phones. Needed the tests.
+ /* //for block labdscape position on phones. Needed the tests.
   @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
     html {
       transform: rotate(-90deg);
@@ -382,7 +410,7 @@ export default {
       top: 100%;
       left: 0;
     }
-  } 
+  } */
 
    @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
     .blok-wrapper-horizontal{
@@ -411,6 +439,12 @@ export default {
   }
 
   } 
+
+ @media (max-width: 375px){
+    .blok-header__author-text{
+    font-size: 8px !important;
+    }
+  }
 
 </style>
 

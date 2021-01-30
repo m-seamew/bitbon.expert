@@ -30,18 +30,11 @@
           <div class="note">
             {{$t('potential.chapter_3.text')}}
            </div>
-           <div class="potential__logos-container--fond"> 
-             <div class="potential__logo-item--fond" v-for="(el, index) in tablePoint($t('potential.chapter_3.fonds'))" :key="index">
-               <div class="potential__logo-container--fond">
-                  <img :src='require(`~/assets/img/${el.img}`)' alt="logo fond" class="img--full">
-               </div>
-               <div class="potential__logo-fond-comment" v-html="el.text">
-               </div>
-           </div>
-        </div>
+           <FondSlider  v-if="isMobile" :data="tablePoint($t('potential.chapter_3.fonds'))"></FondSlider>
+           <Fond v-else :data="tablePoint($t('potential.chapter_3.fonds'))"></Fond>
+        </div> 
       </div>
-      </div>
-    </div>   
+      </div> 
   </Blok> 
 </template> 
 
@@ -52,6 +45,9 @@ import CompanyCompSlider from '~/components/bloks/potential/logoCompanySlider';
 import LogoCountries from '~/components/bloks/potential/logoCountries';
 import LogoCountriesSlider from '~/components/bloks/potential/logoCountriesSlider';
 
+import FondSlider from '~/components/bloks/potential/fondSlider';
+import Fond from '~/components/bloks/potential/fond';
+
 export default {
   data: () => ({
     isMobile: true,
@@ -60,7 +56,9 @@ export default {
     CompanyComp,
     CompanyCompSlider,
     LogoCountries,
-    LogoCountriesSlider
+    LogoCountriesSlider,
+    FondSlider,
+    Fond
   },
   methods:{
     checkIfMobile(){

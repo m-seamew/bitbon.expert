@@ -7,7 +7,7 @@
     <article class="main__container service2__main-container">
       <div class="token__container-with-logo service__container-with-logo">
           <div class="service__img-cont--service3">
-            <div class="service__img-header--service2">
+            <div class="service__img-header--service2 service__text-header--mb">
               <div class="service__img-cont--world">
                  <img class="img service__img--hand" src="~assets/img/service/hand.png" alt="hand">
               </div>
@@ -19,7 +19,7 @@
 
       <div class="token__container-with-logo service__container-with-logo">
           <div class="service__img-cont--service3">
-            <div class="service__img-header--service2">
+            <div class="service__img-header--service2 service__text-header--mb">
               <div class="service__img-cont--world"> 
                  <img class="img service__img--contract" src="~assets/img/service/contract.png" alt="smart contract">
               </div>
@@ -107,14 +107,22 @@ export default {
 
   @media (max-width: 730px) {
     .service__img-cont--service3{
-      flex: 0 0 100%;
+      flex: 0 0 32%;
     }
     .service__chapter--padding-3{
       padding-left: 0;
     }
     .service3__subnote{
-    margin-left: 31%;
-    margin-top: 5%;
+      margin-left: 31%;
+      margin-top: 5%;
+    }
+    .service__text-header--mb{
+      font-size: 1em !important; 
+    }
+
+    .service__chapter--padding-3{
+      border-left: 1px solid  #cbcbcb;;
+      padding: 0 0 0 5px;
     }
   } 
 

@@ -163,6 +163,7 @@ export default {
   @media (max-width: 1023px){
   .plan__main-container--1{
       padding-bottom: 30px;
+      margin-top: -3%;
   }
 }
 </style>

@@ -77,7 +77,7 @@ export default {
           ]
         },
       ]
-    }*/],
+    }],*/
     [
       '@nuxtjs/firebase',
       {

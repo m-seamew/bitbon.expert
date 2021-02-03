@@ -4,7 +4,7 @@
     <h3 class="tablecomp__table-column-header" :class="active ? null : 'active'"  v-html="$t('tablecomp.column_left.title')" @click="showPrew"></h3>
     <h3 class="tablecomp__table-column-header" :class="active ? 'active' : null"  v-html="$t('tablecomp.column_right.title')"  @click="showNext"></h3>
   </div>  
-  <VueSlickCarousel ref="carousel" :arrows="false" :dots="false" @swipe="active = !active">
+  <VueSlickCarousel ref="carousel" :arrows="false" :dots="false" @swipe="active = !active" class="table__slider">
     <div class="tablecomp__table-column tablecomp__table-column--left">
       <div class="tablecomp__text--left">
         
@@ -129,6 +129,11 @@ export default {
 
   .tablecomp__table-column-header.active{
     pointer-events: none;
+  }
+
+
+  .table__slider.slick-track{
+    background-color: rgba(255, 238, 0, 0.35) im !important; 
   }
 
 

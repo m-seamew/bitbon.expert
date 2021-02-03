@@ -2,7 +2,6 @@
   <div class="container">
     <TableBlok></TableBlok>
     <ChartScreen id="test1"></ChartScreen>
-    <Mainaboutsystem></Mainaboutsystem>
     <TargetProject id="test2"></TargetProject>
     <Plan1 id="test3"></Plan1>
     <Plan2></Plan2>
@@ -21,6 +20,7 @@
     <Devs></Devs>
     <Vuvod></Vuvod>
     <Stat></Stat>
+    <Mainaboutsystem></Mainaboutsystem>
     
     <Infrastructure1></Infrastructure1>
     <Infrastructure2 id="test"></Infrastructure2>

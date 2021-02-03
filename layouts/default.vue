@@ -1,9 +1,9 @@
 <template>
   <div>
-       <div id="load" class="main">  <!-- -->
+       <div id="loadcontent" class="main">
          <Header :bitbonprice="bitbonPrice"></Header>
          <Nuxt :bitbonprice="bitbonPrice"/>
-         <Footer v-if="isMobile" @burgerOpen="burger('open')"></Footer>
+         <!--<Footer v-if="isMobile" @burgerOpen="burger('open')"></Footer>-->
        </div>       
   </div>
 </template>
@@ -53,10 +53,10 @@ export default {
     this.$store.dispatch('isMobile/changeIsMobile', this.isMobile)
     window.addEventListener("resize", this.checkIfMobile);
 
-    this.$nuxt.$on('finishLoading', () => {    
-        setTimeout(()=>{document.querySelector('#load').classList.add("hide");}, 3500);
+    this.$nuxt.$on('finishLoading', () => {   
+        console.log('testing'); 
+        setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide");}, 3500);
     })
-    setTimeout(()=>{document.querySelector('#load').classList.add("hide");}, 3500);
   },
   beforeDestroy(){
     window.removeEventListener('resize', this.checkIfMobile); 

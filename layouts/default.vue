@@ -77,6 +77,7 @@ export default {
   .hide{
    animation: visibl .5s forwards;
    pointer-events: auto;
+   opacity: 1;
   }
   
 

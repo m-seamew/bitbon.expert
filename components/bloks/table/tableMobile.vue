@@ -82,8 +82,8 @@ export default {
     width: auto !important;
   }
 
-  .tablecomp__table-column--left{
-    background-color: rgba(255, 238, 0, 0.35);
+  .tablecomp__table-column--right{
+    //background-color: rgba(255, 238, 0, 0.35);
   }
 
   .tablecomp__table-column{

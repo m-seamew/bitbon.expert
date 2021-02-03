@@ -57,7 +57,7 @@ export default {
       fonts: [
         // Font
         {
-          fileExtensions: ['eot','woff', 'truetype'],
+          fileExtensions: ['eot','woff', 'ttf'],
           fontFamily: 'Proxima Nova',
           fontFaces: [
             {

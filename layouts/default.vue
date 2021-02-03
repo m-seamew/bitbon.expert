@@ -56,6 +56,7 @@ export default {
     this.$nuxt.$on('finishLoading', () => {    
         setTimeout(()=>{document.querySelector('#load').classList.add("hide");}, 3500);
     })
+    setTimeout(()=>{document.querySelector('#load').classList.add("hide");}, 3500);
   },
   beforeDestroy(){
     window.removeEventListener('resize', this.checkIfMobile); 

@@ -1,6 +1,6 @@
 <template>
   <div>
-       <div>  <!-- id="load" class="main"-->
+       <div id="load" class="main">  <!-- -->
          <Header :bitbonprice="bitbonPrice"></Header>
          <Nuxt :bitbonprice="bitbonPrice"/>
          <Footer v-if="isMobile" @burgerOpen="burger('open')"></Footer>

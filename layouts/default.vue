@@ -3,7 +3,7 @@
        <div>  <!-- id="load" class="main"-->
          <Header :bitbonprice="bitbonPrice"></Header>
          <Nuxt :bitbonprice="bitbonPrice"/>
-         <!--<Footer v-if="isMobile" @burgerOpen="burger('open')"></Footer>-->
+         <Footer v-if="isMobile" @burgerOpen="burger('open')"></Footer>
        </div>       
   </div>
 </template>

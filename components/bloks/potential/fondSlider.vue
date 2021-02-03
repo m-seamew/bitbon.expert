@@ -57,6 +57,7 @@ export default {
     margin-top: Max(15px, 4%);
     padding-left: 25%;
     padding-right: 25%;
+    padding-bottom: 10px;
   }
 
   .potential__logos-container--fond{

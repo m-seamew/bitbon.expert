@@ -1,6 +1,51 @@
 export default {
   subnotes:{
     link_text: `по&nbsp;<a :href="link" class="link-help">ccылке</a>`
+  },
+
+  footer: {
+    menu: [
+      {
+        img: 'slide1.jpg',
+        text: 'Обзор проекта Система Bitbon',
+        link: '/firstpitch',
+        slug: '/firstpitch'
+      },
+      {
+        img: 'slide1.jpg',
+        text: 'Обзор проекта Система Bitbon',
+        link: '/firstpitch',
+        slug: '/firstpitch2'
+      },
+      {
+        img: 'slide1.jpg',
+        text: 'Обзор проекта Система Bitbon',
+        link: '/firstpitch',
+        slug: '/firstpitch3'
+      },
+    ]
+  },
+
+  preloader: {
+    text_about: 'разработано командой bitbon.today',
+    subtitle: 'лучший презентационный материал на тему Cистемы Bitbon'
+  },
+
+  burger:{
+    points: [
+      {
+        name: 'Название 1',
+        hash: 'test1'
+      },
+      {
+        name: 'Название 2',
+        hash: 'test2'
+      },
+      {
+        name: 'Название 3',
+        hash: 'test3'
+      },
+    ]
   }
   /*
   test:'ну',

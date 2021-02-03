@@ -9,9 +9,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap'}
     ]
   },
+
+  loading: '~/components/loading.vue',
 
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -24,7 +25,9 @@ export default {
   plugins: [
     '~plugins/app-components.js',
     '~plugins/vue-carousel.js',
-    { src: './plugins/flickity.js', ssr: false},
+    '~plugins/vueLottie.js', 
+    { src: '~plugins/preloader-typer.js', mode: 'client'},
+    { src: './plugins/flickity.js', mode: 'client'},
     { src: './plugins/videoplayer.js', mode: 'client' }
   ],
 
@@ -33,13 +36,67 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    ["nuxt-compress",
+    {
+      gzip: {
+        cache: true
+      },
+      brotli: {
+        threshold: 10240
+      }
+    }]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    'nuxt-i18n',
     'vue-scrollto/nuxt',
-    ['@khusainovrm/nuxt-player', { namespace: 'UcasePlayer', defaultUrl: "someUrl" }], 
+    ['vue-wait/nuxt', { useVuex: true }],
+    ['nuxt-font-loader-strategy', { 
+      ignoreLighthouse: true,
+      ignoredEffectiveTypes: ['2g', 'slow-2g'],
+      fonts: [
+        // Font
+        {
+          fileExtensions: ['woff'],
+          fontFamily: 'Proxima Nova',
+          fontFaces: [
+            {
+              preload: true,
+              localSrc: ['Proxima Nova', 'ProximaNova-Regular'],
+              src: '@/static/fonts/ProximaNova-Regular',
+              fontWeight: 400,
+              fontStyle: 'normal'
+            },
+            {
+              preload: true,
+              localSrc: ['Proxima Nova', 'ProximaNova-Bold'],
+              src: '@/static/fonts/ProximaNova-Bold',
+              fontWeight: 700,
+              fontStyle: 'normal'
+            }
+          ]
+        },
+      ]
+    }],
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: "AIzaSyAyYdVfObDjuNmetodr18ncoXInS912qvA",
+          authDomain: "bitbonexpert.firebaseapp.com",
+          databaseURL: "https://bitbonexpert-default-rtdb.europe-west1.firebasedatabase.app",
+          projectId: "bitbonexpert",
+          storageBucket: "bitbonexpert.appspot.com",
+          messagingSenderId: "963964787367",
+          appId: "1:963964787367:web:375f5d7eb84dc35650d982"
+        },
+        services: {
+          database: true,
+        },
+        lazy: true,
+      }
+    ],
+    'nuxt-i18n',
   ],
   i18n: {
     strategy: 'prefix_except_default',

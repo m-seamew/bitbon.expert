@@ -1,9 +1,10 @@
 <template>
   <div class="container">
-    <TableBlok id="test1"></TableBlok>
-    <ChartScreen id="test2"></ChartScreen>
-    <TargetProject id="test3"></TargetProject>
-    <Plan1 id="test"></Plan1>
+    <TableBlok></TableBlok>
+    <ChartScreen id="test1"></ChartScreen>
+    <Mainaboutsystem></Mainaboutsystem>
+    <TargetProject id="test2"></TargetProject>
+    <Plan1 id="test3"></Plan1>
     <Plan2></Plan2>
 
     <Potential></Potential>
@@ -20,7 +21,7 @@
     <Devs></Devs>
     <Vuvod></Vuvod>
     <Stat></Stat>
-    <Mainaboutsystem></Mainaboutsystem>
+    
     <Infrastructure1></Infrastructure1>
     <Infrastructure2 id="test"></Infrastructure2>
     <Infrastructure3></Infrastructure3>
@@ -28,7 +29,6 @@
 </template>
 
 <script>
-import Block from '~/components/Blok';
 import Infrastructure1 from '~/components/bloks/infrastructure1';
 import Infrastructure2 from '~/components/bloks/infrastructure2';
 import Infrastructure3 from '~/components/bloks/infrastructure3';
@@ -64,14 +64,12 @@ const VueScrollTo = require('vue-scrollto');
 export default {
   data: () => ({
     lang: 'ru',
+    observer: {},
     id: [
-      'test',
       'test1',
       'test2',
-      'test3',
-      'video',
-    ],
-    observer: {},
+      'test3'
+    ]
   }),
   components: {
     Infrastructure1,
@@ -98,52 +96,59 @@ export default {
     Potential,
   },
   methods: {
-    changeLanguage(lang){
-      this.lang = lang;
-    },
-    addHashToLocation(params) {
-    history.pushState(
-    {},
-    null,
-    this.$route.path  + '/' + encodeURIComponent(params)
-    )
-        console.log( this.$route.path );
-  }
+    addHashToLocation(hash) {
+      location.hash = hash;
+    }
   },
   scrollToTop: false,
+  beforeMount(){
+  },
   mounted(){
-    
-    const targer = this.id.map(el => [el, document.querySelector(`#${el}`)]);
+    this.$fire.databaseReady()
+    .then(()=>{
+        this.$fire.database.ref().once('value', snapshot => { 
+          this.$fire.database.ref().update(
+          {firstPitchLook: snapshot.val().firstPitchLook + 1
+          })
+        });
+    })
+  
+  const targer = this.id.map(el => [el, document.querySelector(`#${el}`)]);
 
-
-    targer.forEach( (el,index) => {
+  if(process.browser){
+        targer.forEach( (el,index) => {
       this.observer[index] = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.intersectionRatio >= 0.6) {
-             this.addHashToLocation(`${el[0]}`)
+            this.addHashToLocation(`#${el[0]}`); 
+            //console.log('11');            
             }
         });
       },{threshold: [0 , 0.25, 0.5, 0.75, 1]});
       this.observer[index].observe(el[1]);
     });
-
-    const slug = this.$store.getters['slug/getSlug'];
-
+  }
+/*
+  const slug = this.$store.getters['slug/getSlug'];
      if(slug !== ''){
        const distance = document.querySelector(`#${slug}`);
-       console.log(distance);
-       VueScrollTo.scrollTo(distance, 700);
+       VueScrollTo.scrollTo(distance, 0);
        this.$store.dispatch('slug/changeSlug', '');
      }
+  */
 
+  this.$nextTick(function () {
+    this.$nuxt.$emit('finishLoading')
+  })
+
+    
   },
+  /*
   destroyed(){
-
       for(let i = 0; i < Object.keys(this.observer).length; i++){
           this.observer[i].disconnect();
       }
-
-  }
+  }*/
 }
 
 </script>

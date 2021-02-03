@@ -1,6 +1,6 @@
 <template>
   <section
-    :class="[
+   :class="[
       blockparam, 
       blockparam == 'blok-wrapper-vertical' && footer_show === true ? 'block-wrapper-vartical--fixfooter-mobile' : null
     ]"
@@ -162,6 +162,9 @@ export default {
       width: 98vw;
       height: auto;
     }
+    .blok-wrapper{
+      height: auto !important;
+    } 
   }
 
   .blok-wrapper-horizontal{

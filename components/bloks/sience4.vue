@@ -207,6 +207,7 @@ export default {
      &__img-container{
       flex: 0 0 30%;
       width: 30%;
+      height: min-content;
       display: flex;
       position: relative;
      }

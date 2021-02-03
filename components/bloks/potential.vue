@@ -50,7 +50,7 @@ import Fond from '~/components/bloks/potential/fond';
 
 export default {
   data: () => ({
-    isMobile: true,
+    isMobiles: true,
   }),
   components:{
     CompanyComp,
@@ -60,10 +60,12 @@ export default {
     FondSlider,
     Fond
   },
+  computed:{
+    isMobile(){
+      return this.$store.getters['isMobile/getIsMobile'];
+    }
+  },
   methods:{
-    checkIfMobile(){
-      this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
-    },
     tablePoint(objData){
       const data = [];
       for(let i = 0; i < Object.keys(objData).length; i++){
@@ -72,13 +74,6 @@ export default {
       return data;
     }
   },
-  mounted(){
-    this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
-    window.addEventListener("resize", this.checkIfMobile);
-  },
-  beforeDestroy(){
-    window.removeEventListener('resize', this.checkIfMobile); 
-  }
 }
 </script>
 

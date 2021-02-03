@@ -1,8 +1,10 @@
 <template>
   <div>
-    <Header :bitbonprice="bitbonPrice"></Header>
-    <Nuxt :bitbonprice="bitbonPrice"/>
-    <!--<Footer></Footer>-->
+       <div id="load" class="main">
+         <Header :bitbonprice="bitbonPrice"></Header>
+         <Nuxt :bitbonprice="bitbonPrice"/>
+         <Footer v-if="isMobile" @burgerOpen="burger('open')"></Footer>
+       </div>       
   </div>
 </template>
 
@@ -21,26 +23,72 @@ export default {
   },
   data: () => ({
     bitbonPrice: 0,
+    isMobile: true,
   }),
+  methods: {
+    checkIfMobile(){
+      this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
+      this.$store.dispatch('isMobile/changeIsMobile', this.isMobile);
+    }
+  },
+  beforeMount(){
+    this.$fire.databaseReady()
+        .then(()=>{
+          this.$fire.database.ref().on('value', snapshot => {
+             this.$store.dispatch('stat/changeStat' , snapshot.val());
+          })
+        })
+        .then(()=>{
+          this.$fire.database.ref().on('child_changed', snapshot => {
+             this.$store.dispatch('stat/changeStat' , snapshot.val());
+          })
+        })
+        .catch(err => console.log(err));
+  },
   mounted(){
     const myScreenOrientation = window.screen.orientation;
     myScreenOrientation.lock("portrait"); 
 
-    document.addEventListener('touchmove', function (event) {
-      if (event.scale !== 1) { event.preventDefault(); }
-    }, false);
-  },
+    this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
+    this.$store.dispatch('isMobile/changeIsMobile', this.isMobile)
+    window.addEventListener("resize", this.checkIfMobile);
 
-  beforeDestroy(){
-    window.removeEventListener('touchmove', function (event) {
-      if (event.scale !== 1) { event.preventDefault(); }
-    }, false);
+    this.$nuxt.$on('finishLoading', () => {    
+        setTimeout(()=>{document.querySelector('#load').classList.add("hide");}, 0);
+    })
   },
+  beforeDestroy(){
+    window.removeEventListener('resize', this.checkIfMobile); 
+  }
 }
 </script>
 
 <style lang="scss">
   @import '~/assets/scss/variables';
+  .main{
+    //transition: opacity .5s;
+    opacity: 0;
+    background-color: $bgdefault; 
+    pointer-events: none;
+
+  }
+
+  .hide{
+   animation: visibl .5s forwards;
+   pointer-events: auto;
+  }
+  
+
+  @keyframes visibl {
+  0%   { opacity: 0;
+       }
+  60%  {opacity: 0.8;
+        }
+  100% { opacity: 1;
+        }
+  }
+
+
   html{
     background-color: $bgdefault;
     line-height: $mainLineHeight;

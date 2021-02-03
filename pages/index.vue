@@ -30,6 +30,11 @@ export default {
   computed: {
    
   },
+  mounted(){
+      this.$nextTick(function () {
+      this.$nuxt.$emit('finishLoading');
+    })
+  },
   scrollToTop: false,
 }
 

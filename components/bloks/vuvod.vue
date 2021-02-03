@@ -165,9 +165,9 @@ export default {
     top: auto;
   }
 
-  @media (max-width: 380px) {
+  @media (max-width: 480px) {
     .subnotes-text {
-    padding: 0.5em 1em;
+    padding: 0 1em;
     }
   }
 

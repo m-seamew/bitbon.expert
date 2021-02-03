@@ -123,50 +123,37 @@ export default {
   .blok-wrapper:not(:first-child){
     margin-top: 1vh;
   }
-
   .blok-header{
     display: flex;
     justify-content: space-between;
   }
-
   .blok-header__author-logo{
     display: flex;
     width: 22%;
   }
-
   @media (max-width: 420px){
     .blok-header__author-logo{
     width: 21%;
     margin-bottom: 1px;
     }
   }
-
-
   .blok-wrapper-vertical{
       width: 90vw;
       height: $screen_vertical_mode;
       font-size: Min(27px, calc(13px + 14 * (#{$screen_vertical_mode}/1080)));
-
     .blok-header__number{
       font-size: Min(20px, calc(10px + 10 * (#{$screen_vertical_mode}/1080)));
     }
-
     .blok-header__author-text, .blok-footer__link{
       font-size: Min(17px, calc(10px + 7 * 0.7 * (#{$screen_vertical_mode}/1080)));
     }
-
   }
-
   @media (orientation: portrait) and (max-width: 1024px) {
    .blok-wrapper-vertical{
       width: 98vw;
       height: auto;
     }
-    .blok-wrapper{
-      height: auto !important;
-    } 
   }
-
   .blok-wrapper-horizontal{
       width: $screen_horizontal_mode;
       height:90vh;
@@ -178,7 +165,6 @@ export default {
          font-size: Min(17px, calc(10px + 7 * 0.7 * (#{$screen_horizontal_mode}/1080)));
       }
   }
-
   .blok-header__number{
     text-transform: uppercase;
     color: #333333;
@@ -200,7 +186,6 @@ export default {
     padding-top: Min(35px, calc(15px + 20 * (100vh/1080)));
     padding-right: Min(40px, calc(10px + 30 * (100vh/1080)));
   }
-
   .blok-header__author-text{
     max-width: 232px;
     opacity: 0.3;
@@ -210,12 +195,10 @@ export default {
     color: #000000;
     text-transform: uppercase;
   }
-
   .blok-header__author-img{
     width: 100%;
     object-fit: contain;
   }
-
   .blok-footer__link{
     font-weight: bold;
     text-decoration: none;
@@ -229,17 +212,14 @@ export default {
     left: Min(55px, calc(10px + 45 * (100vh/1080)));
     bottom: Min(40px, calc(10px + 30 * (100vh/1080)));
   }
-
   .blok__content{
     margin-left: 55px;
     margin-right: 55px;
     padding-bottom: 10px;
   }
-
   .blok-footer__link:visited{
     color: black;
   }
-
   .blok-footer__img{
     position: absolute;
     max-width: 320px;
@@ -249,7 +229,6 @@ export default {
     bottom: -50px;
     z-index: -1;
   }
-
   @media (max-width: 1023px) {
     .blok-footer__img{
       right: -5.5%;
@@ -258,20 +237,15 @@ export default {
       width: 50%;
     }  
   }
-
-
-
   .blok-header__titles-cont{
     margin-bottom: Min(48px, 5%);
   }
-
   .blok__content, .blok-header__titles-cont{
     //margin-left: Min(55px, calc(10px + 45 * (100vh/1080)));
     //margin-right: Min(55px, calc(10px + 45 * (100vh/1080)));
     margin-left: Min(55px, 5%);
     margin-right: Min(55px, 5%);
   }
-
   .blok-header__title{
     font-weight: 700;
     font-size: $headerFontSize;
@@ -281,15 +255,11 @@ export default {
     text-transform: uppercase;
     color: $fontHeader;
   }
-
-
-
   .blok-header__title--first{
     font-size: $headerFontSizeFirst;
     color: $mainFontColor;
     text-transform: none;
   }
-
   .blok-header__subtitle{
     font-weight: 700;
     font-size: $subheaderFontSize;
@@ -298,15 +268,10 @@ export default {
     text-transform: uppercase;
     color: $fontHeader;
   }
-
-
   .blok-header__subtitle--first{
     font-size: $subheaderFontSizeFirst;
     color: $mainFontColor;
   }
-
-/*
-
   @media (max-width: 1023px) {
     .blok-header__title--first{
     font-size: $headerFontSizeFirst * 0.75;
@@ -315,15 +280,12 @@ export default {
     font-size: $subheaderFontSizeFirst *0.85;
     }
   }
-*/
-/*
   @media (orientation: landscape) and (max-width: 1024px) {
    .blok-wrapper-horizontal{
       width: $screen_vertical_mode;
       height: 90vw;
     }
-  }*/
-
+  }
   @media (max-width: 730px){
     .blok-header__number{
       font-size: calc(10px + (10 + 10 * 0.7) * ((#{$screen_vertical_mode} - 320px) / 1080)) !important;
@@ -331,28 +293,23 @@ export default {
       .blok-header__author-text, .blok-footer__link{
       font-size: calc(10px + (5 + 5 * 0.7) * ((#{$screen_vertical_mode} - 320px) / 1080)) !important;
       }
-
     .blok-header__author{
       padding-top: calc(15px + (20 + 20 * 0.7) * ((100vh - 320px)/1080));
       padding-right: calc(10px + (30 + 30 * 0.7) * ((100vw - 320px)/1080));
     }  
-
     .blok-header__number{
       padding-top: calc(10px + (20 + 20 * 0.7) * ((100vh - 320px)/1080));
       padding-left: calc(10px + (30 + 30 * 0.7) * ((100vw - 320px)/1080));
     }
-
     .blok-footer__link{
       left: calc(10px + (45 + 45 * 0.7) * ((100vw - 320px)/1080));
       bottom: calc(10px + (30 + 30 * 0.7) * ((100vh - 320px)/1080));
     }
-
     .blok__content, .blok-header__titles-cont{
       margin-left: calc(10px + (45 + 45 * 0.7) * ((100vw - 320px)/1080));
       margin-right: calc(10px + (45 + 45 * 0.7) * ((100vw - 320px)/1080));
     }
   }
-
    @media (max-height: 1024px) and (max-width: 720px){
      .blok-wrapper-vertical{
         font-size: calc(13px + (14 + 14 * 0.7) * (100vh - 570px) / 1080) !important;
@@ -360,9 +317,7 @@ export default {
       .blok-wrapper-horizontal{
         font-size: calc(13px + (14 + 14 * 0.7) * (100vw - 320px) / 1080) !important;
     }
-
   }
-
   @media (min-width: 1025px) and (max-height: 750px){
     .blok-header__author-text{
       font-size: Min(17px, calc(12px + (5 * 5 * 0.7) * ((90vh - 631px)/1080)))
@@ -371,25 +326,21 @@ export default {
       font-size: calc(13px + (14 + 14 * 0.7) * (100vh - 631px) / 1080) !important;
     }
   }
-
   @media (min-width: 1025px) and (min-height: 1080px) and (max-height: 1199px) {
     .blok-wrapper-horizontal{
       font-size: calc(13px + 14 * 0.75 * (100vh / 1080)) !important;
     }
   }
-
   @media (min-width: 1025px) and (min-height: 1200px) {
     .blok-wrapper-horizontal{
       font-size: 27px !important;
     }
   }
-
   @media (max-height: 950px){
     .blok-wrapper-horizontal{
       font-size: calc(13px + (14 + 14 * 0.7) * (100vh - 631px) / 1080) !important;
     }
   }
-
   @media (max-width: 730px){
     .blok-wrapper-vertical{
       font-size: calc(13px + (14 + 14 * 0.7) * (100vw - 320px) / 1080) !important;
@@ -404,7 +355,6 @@ export default {
       font-size: calc(13px + (14 + 14 * 0.7) * ((100vh - 570px) / 1080)) !important;
     }
   }
-
  /* //for block labdscape position on phones. Needed the tests.
   @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
     html {
@@ -417,42 +367,34 @@ export default {
       left: 0;
     }
   } */
-/*
    @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
     .blok-wrapper-horizontal{
       font-size: Max(13px, calc(13px + (14 + 14 * 0.7) * ((100vh - 320px) / 1080))) !important;
-      height: 98vh;
+      height: 99vh;
       width: auto;
       //width: $screen_horizontal_mode; 
       padding-bottom: 0;
     }
-
     .blok-wrapper-horizontal{
       width: 100%;
     }
-
     .blok-header__number{
       font-size: Max(13px, calc(13px + (14 + 14 * 0.7) * ((#{$screen_horizontal_mode} - 320px) / 1080))) !important;
       }
     .blok-header__author-text, .blok-footer__link{
         font-size: Max(10px, calc(10px + (5 + 5 * 0.7) * ((#{$screen_horizontal_mode} - 320px) / 1080))) !important;
     }
-
      @media (max-width: 730px){
     .blok-wrapper-horizontal{
       font-size: calc(13px + (14 + 14 * 0.7) * ((100vh - 320px) / 1080)) !important;
     }
-    }
-
-  } z*/
-
+  }
+  } 
  @media (max-width: 375px){
     .blok-header__author-text{
-    max-width: 40%;
     font-size: 8px !important;
     }
   }
-
 </style>
 
 <i18n locale="ru" src="~/assets/lang/bloktemplate/ru.json"></i18n>

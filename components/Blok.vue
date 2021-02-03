@@ -414,12 +414,12 @@ export default {
       top: 100%;
       left: 0;
     }
-  } 
+  } */
 
    @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
     .blok-wrapper-horizontal{
       font-size: Max(13px, calc(13px + (14 + 14 * 0.7) * ((100vh - 320px) / 1080))) !important;
-      height: 99vh;
+      height: 98vh;
       width: auto;
       //width: $screen_horizontal_mode; 
       padding-bottom: 0;
@@ -442,13 +442,14 @@ export default {
     }
   }
 
-  } */
-/*
+  } 
+
  @media (max-width: 375px){
     .blok-header__author-text{
+    max-width: 40%;
     font-size: 8px !important;
     }
-  }*/
+  }
 
 </style>
 

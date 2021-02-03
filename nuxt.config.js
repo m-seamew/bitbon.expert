@@ -13,7 +13,9 @@ export default {
   },
 
   loading: '~/components/loading.vue',
-
+  generate: {
+    fallback: true
+  },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [

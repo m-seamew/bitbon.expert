@@ -32,6 +32,8 @@ export default {
     }
   },
   beforeMount(){
+    setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide");}, 3500);
+    setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide--test");}, 3500);
     this.$fire.databaseReady()
         .then(()=>{
           this.$fire.database.ref().on('value', snapshot => {
@@ -52,11 +54,12 @@ export default {
     this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
     this.$store.dispatch('isMobile/changeIsMobile', this.isMobile)
     window.addEventListener("resize", this.checkIfMobile);
+    /*
 
     this.$nuxt.$on('finishLoading', () => {   
         console.log('testing'); 
         setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide");}, 3500);
-    })
+    })*/
   },
   beforeDestroy(){
     window.removeEventListener('resize', this.checkIfMobile); 
@@ -68,14 +71,19 @@ export default {
   @import '~/assets/scss/variables';
   .main{
     //transition: opacity .5s;
-    opacity: 0;
+   // opacity: 0;
     background-color: $bgdefault; 
-    pointer-events: none;
+   // pointer-events: none;
 
   }
 
   .hide{
    animation: visibl .5s forwards;
+   pointer-events: auto;
+   opacity: 1;
+  }
+
+   .hide-test{
    pointer-events: auto;
    opacity: 1;
   }

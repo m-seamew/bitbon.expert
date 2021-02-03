@@ -1,4 +1,5 @@
 <template>
+  <client-only>
   <div class="mobile__menu">
     <div class="mobile__menu-container">
       <div class="like__continer menu__container">
@@ -21,6 +22,7 @@
       </div>
     </div>
   </div>
+  </client-only>
 </template>
 
 <script>
@@ -75,8 +77,8 @@ export default {
     }
   },
   mounted(){
+    this.$fire.databaseReady();
     const tempIsLike = localStorage.getItem('isLike');
-    console.log(tempIsLike);
     if(tempIsLike !== undefined && tempIsLike == "true") {
       this.isLike = true;
       this.$refs.lottie.goFrameAndPlay(96, false)

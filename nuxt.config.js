@@ -12,7 +12,7 @@ export default {
     ]
   },
 
-  //loading: '~/components/loading.vue',
+ // loading: '~/components/loading.vue',
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
@@ -20,13 +20,24 @@ export default {
     {src: '@/assets/scss/main.scss', lang: 'scss'}
   ],
 
+
+  server: {
+    port: 8000, // default: 3000
+    host: '0.0.0.0', // default: localhost,
+    timing: false
+  },
+  database: {
+    emulatorPort: process.env.NODE_ENV === 'development' ? 9000 : undefined,
+    emulatorHost: 'localhost',
+  },
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '~plugins/app-components.js',
+    '~plugins/app-components.js', 
     '~plugins/vue-carousel.js',
-    '~plugins/vueLottie.js', 
+    { src: '~plugins/vueLottie.js', mode: 'client'},
     { src: '~plugins/preloader-typer.js', mode: 'client'},
-    { src: './plugins/flickity.js', mode: 'client'},
+    { src: './plugins/flickity.js', ssr: false},
     { src: './plugins/videoplayer.js', mode: 'client' }
   ],
 

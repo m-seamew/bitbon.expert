@@ -36,7 +36,7 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-  ["nuxt-compress",
+ /* ["nuxt-compress",
     {
       gzip: {
         cache: true
@@ -44,20 +44,20 @@ export default {
       brotli: {
         threshold: 10240
       }
-    }]
+    }]*/
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'vue-scrollto/nuxt',
     ['vue-wait/nuxt', { useVuex: true }],
-   /* ['nuxt-font-loader-strategy', { 
+    ['nuxt-font-loader-strategy', { 
       ignoreLighthouse: true,
       ignoredEffectiveTypes: ['2g', 'slow-2g'],
       fonts: [
         // Font
         {
-          fileExtensions: ['eot','woff', 'ttf'],
+          fileExtensions: ['ttf', 'eot','woff', ],
           fontFamily: 'Proxima Nova',
           fontFaces: [
             {
@@ -77,7 +77,7 @@ export default {
           ]
         },
       ]
-    }],*/
+    }],
     [
       '@nuxtjs/firebase',
       {

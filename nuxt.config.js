@@ -36,7 +36,7 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
- /* ["nuxt-compress",
+  /*["nuxt-compress",
     {
       gzip: {
         cache: true
@@ -44,8 +44,8 @@ export default {
       brotli: {
         threshold: 10240
       }
-    }]*/
-  ],
+    }]
+  ],*/
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
@@ -57,7 +57,7 @@ export default {
       fonts: [
         // Font
         {
-          fileExtensions: ['ttf', 'eot','woff', ],
+          fileExtensions: ['woff'],
           fontFamily: 'Proxima Nova',
           fontFaces: [
             {

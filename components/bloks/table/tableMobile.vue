@@ -1,7 +1,7 @@
 <template>
   <div>
   <div class="table__mobile-headers">
-    <h3 class="tablecomp__table-column-header" :class="active ? null : 'active'"  v-html="$t('tablecomp.column_left.title')" @click="showNext"></h3>
+    <h3 class="tablecomp__table-column-header" :class="active ? null : 'active'"  v-html="$t('tablecomp.column_left.title')" @click="showPrew"></h3>
     <h3 class="tablecomp__table-column-header" :class="active ? 'active' : null"  v-html="$t('tablecomp.column_right.title')"  @click="showNext"></h3>
   </div>  
   <VueSlickCarousel ref="carousel" :arrows="false" :dots="false" @swipe="active = !active">
@@ -56,6 +56,10 @@ export default {
         this.$refs.carousel.next();
         this.active = !this.active;
     },
+    showPrew() {
+        this.$refs.carousel.prev();
+        this.active = !this.active;
+    },
   }
 }
 </script>
@@ -76,6 +80,10 @@ export default {
 
   .tablecomp__table-column--left{
     width: auto !important;
+  }
+
+  .tablecomp__table-column--left{
+    background-color: rgba(255, 238, 0, 0.35);
   }
 
   .tablecomp__table-column{

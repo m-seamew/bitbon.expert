@@ -54,7 +54,7 @@ export default {
     window.addEventListener("resize", this.checkIfMobile);
 
     this.$nuxt.$on('finishLoading', () => {    
-        setTimeout(()=>{document.querySelector('#load').classList.add("hide");}, 0);
+        setTimeout(()=>{document.querySelector('#load').classList.add("hide");}, 3500);
     })
   },
   beforeDestroy(){

@@ -51,7 +51,7 @@ export default {
   modules: [
     'vue-scrollto/nuxt',
     ['vue-wait/nuxt', { useVuex: true }],
-    ['nuxt-font-loader-strategy', { 
+   /* ['nuxt-font-loader-strategy', { 
       ignoreLighthouse: true,
       ignoredEffectiveTypes: ['2g', 'slow-2g'],
       fonts: [
@@ -77,7 +77,7 @@ export default {
           ]
         },
       ]
-    }],
+    }*/],
     [
       '@nuxtjs/firebase',
       {

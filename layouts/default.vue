@@ -53,9 +53,9 @@ export default {
     this.$store.dispatch('isMobile/changeIsMobile', this.isMobile)
     window.addEventListener("resize", this.checkIfMobile);
 
-    /*this.$nuxt.$on('finishLoading', () => {    
+    this.$nuxt.$on('finishLoading', () => {    
         setTimeout(()=>{document.querySelector('#load').classList.add("hide");}, 3500);
-    })*/
+    })
   },
   beforeDestroy(){
     window.removeEventListener('resize', this.checkIfMobile); 

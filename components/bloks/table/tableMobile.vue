@@ -78,9 +78,7 @@ export default {
     margin-top: 5% !important;
   }
 
-  .tablecomp__table-column--left{
-    width: auto !important;
-  }
+  
 
   .tablecomp__table-column--right{
     //background-color: rgba(255, 238, 0, 0.35);
@@ -102,7 +100,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid rgba($color: white, $alpha: 0.5);
-    padding: 5px 0;
+    padding: 10px 0;
     font-size: 1.1em;
   }
 
@@ -132,10 +130,14 @@ export default {
   }
 
 
-  .table__slider.slick-track{
-    background-color: rgba(255, 238, 0, 0.35) im !important; 
+  .table__slider{
+    background-color: rgba(255, 238, 0, 0.35) !important; 
   }
 
+  .tablecomp__table-column--left{
+    width: auto !important;
+    background-color: transparent !important;
+  }
 
  
 </style>

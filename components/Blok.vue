@@ -305,6 +305,7 @@ export default {
     color: $mainFontColor;
   }
 
+
   @media (max-width: 1023px) {
     .blok-header__title--first{
     font-size: $headerFontSizeFirst * 0.75;
@@ -413,7 +414,7 @@ export default {
       top: 100%;
       left: 0;
     }
-  } */
+  } 
 
    @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
     .blok-wrapper-horizontal{
@@ -441,13 +442,13 @@ export default {
     }
   }
 
-  } 
-
+  } */
+/*
  @media (max-width: 375px){
     .blok-header__author-text{
     font-size: 8px !important;
     }
-  }
+  }*/
 
 </style>
 

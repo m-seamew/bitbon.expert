@@ -20,8 +20,8 @@
     <Devs></Devs>
     <Vuvod></Vuvod>
     <Stat></Stat>
-    <Mainaboutsystem></Mainaboutsystem>
-    
+    <Mainaboutsystem></Mainaboutsystem> 
+
     <Infrastructure1></Infrastructure1>
     <Infrastructure2 id="test"></Infrastructure2>
     <Infrastructure3></Infrastructure3>

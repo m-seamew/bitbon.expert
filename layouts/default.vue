@@ -56,15 +56,9 @@ export default {
     /*this.$nuxt.$on('finishLoading', () => {    
         setTimeout(()=>{document.querySelector('#load').classList.add("hide");}, 3500);
     })*/
-     document.addEventListener('touchmove', function (event) {
-      if (event.scale !== 1) { event.preventDefault(); }
-    }, false);
   },
   beforeDestroy(){
     window.removeEventListener('resize', this.checkIfMobile); 
-     window.removeEventListener('touchmove', function (event) {
-      if (event.scale !== 1) { event.preventDefault(); }
-    }, false);
   }
 }
 </script>
